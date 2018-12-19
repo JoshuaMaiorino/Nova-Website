@@ -216,7 +216,7 @@
         $(document).ready(function () {
           $(".js-modal-btn").each(function(indx, item){
             var vimeoVideoID = $(item).data("video-id");
-                $.getJSON('http://www.vimeo.com/api/v2/video/' + vimeoVideoID + '.json?callback=?', { format: "json" }, function (data) {
+                $.getJSON('https://www.vimeo.com/api/v2/video/' + vimeoVideoID + '.json?callback=?', { format: "json" }, function (data) {
                     featuredImg = data[0].thumbnail_large;
                     $(item).attr("src", featuredImg);
                 });
