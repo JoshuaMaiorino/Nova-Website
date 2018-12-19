@@ -39,15 +39,15 @@
         } );
     </script>
 
-    <script type="text/javascript">var submitted=false;</script>
-    <script type="text/javascript">
-    
-      function test() {
-        $('#gform *').fadeOut(2000);
-        $('#gform').prepend('<span style="color:white">Your submission has been processed...</span>');
-      }
-    </script>
+<script type="text/javascript">var submitted=false;</script>
 
+<script type="text/javascript">
+    
+  function test() {
+    $('.form *').fadeOut(2000);
+    $('.form').prepend('<span style="color:white">Your submission has been processed...</span>');
+  }
+</script>
 
   </head>
 
@@ -165,7 +165,7 @@
 
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">Interested in a quote? Fill out the Form Below</h2>
-             <form class="form" name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSemZB9PsiSuclUHKOWaREWrINn7aMlzyqGN8ODyXsTQpnDJ3A/formResponse?" target="hidden_iframe" onsubmit="submitted=true; test();">
+            <form class="form" accept-charset="UTF-8" action="https://formkeep.com/f/22d2b3ac6adc" method="POST" target="hidden_iframe" onsubmit="submitted=true; test();"> 
               <div class="form-group">
                 <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="entry.817010682" name="entry.817010682" placeholder="Enter your name...">
               </div>
