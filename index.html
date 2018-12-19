@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -19,7 +20,35 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+    <link href="css/datepicker.css" rel="stylesheet" type="text/css"/>	
+
+    <link rel="stylesheet" type="text/css" href="vendor/modal-video/css/modal-video.min.css">
+    <script src="vendor/modal-video/js/jquery-modal-video.min.js"></script>
+
+    <script>
+        $( function() {
+          $( "#TEST" ).datepicker();
+        } );
+    </script>
+
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+    
+      function test() {
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend('<span style="color:white">Your submission has been processed...</span>');
+        event.preventDefault();
+      }
+    </script>
+
 
   </head>
 
@@ -28,7 +57,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Nova Film</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -53,9 +82,9 @@
     <header class="masthead">
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-          <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-          <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+          <h1 class="mx-auto my-0 text-uppercase">Nova Film</h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">Capturing those special moments in life.</h2>
+          <a href="#projects" class="btn btn-primary js-scroll-trigger">See Our Work</a>
         </div>
       </div>
     </header>
@@ -65,12 +94,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-            <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+            <h2 class="text-white mb-4">About Us</h2>
+            <p class="text-white-50">Nova Film was started in 2015 by Joshua and Amanda Maiorino.  They have a passion to importizlie your special day in a theatrical wedding video style.</p>
           </div>
         </div>
-        <img src="img/ipad.png" class="img-fluid" alt="">
+        <img src="img/Silvers-Rings.png" class="img-fluid" alt="">
       </div>
     </section>
 
@@ -81,12 +109,12 @@
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
           <div class="col-xl-8 col-lg-7">
-            <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
+              <img class="img-fluid mb-3 mb-lg-0 js-modal-btn" data-video-id="278968163" src="" alt="">
           </div>
           <div class="col-xl-4 col-lg-5">
             <div class="featured-text text-center text-lg-left">
-              <h4>Shoreline</h4>
-              <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+              <h4>Sessa's Wedding</h4>
+              <p class="text-black-50 mb-0">A beatiful couple gets married.  This video was a two camera shoot by Josh and Amanda.</p>
             </div>
           </div>
         </div>
@@ -94,14 +122,14 @@
         <!-- Project One Row -->
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div class="col-lg-6">
-            <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+            <img class="img-fluid mb-3 mb-lg-0 js-modal-btn" data-video-id="273142760" src="" alt="">
           </div>
           <div class="col-lg-6">
             <div class="bg-black text-center h-100 project">
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                  <h4 class="text-white">Misty</h4>
-                  <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                  <h4 class="text-white">Jackson's Wedding</h4>
+                  <p class="mb-0 text-white-50">This was the perfect wedding located in a small town in Connecicut.  This video was a two camera shoot by Josh and Amanda.</p>
                   <hr class="d-none d-lg-block mb-0 ml-0">
                 </div>
               </div>
@@ -112,14 +140,14 @@
         <!-- Project Two Row -->
         <div class="row justify-content-center no-gutters">
           <div class="col-lg-6">
-            <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+            <img class="img-fluid mb-3 mb-lg-0 js-modal-btn" data-video-id="223853797" src="" alt="">
           </div>
           <div class="col-lg-6 order-lg-first">
             <div class="bg-black text-center h-100 project">
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 class="text-white">Mountains</h4>
-                  <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                  <h4 class="text-white">Sebo's Wedding</h4>
+                  <p class="mb-0 text-white-50">A perfect July Wedding for a perfect couple.  This wedding took place on the Historical Yale Campus.</p>
                   <hr class="d-none d-lg-block mb-0 mr-0">
                 </div>
               </div>
@@ -137,13 +165,20 @@
           <div class="col-md-10 col-lg-8 mx-auto text-center">
 
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-
-            <form class="form-inline d-flex">
-              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-              <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+            <h2 class="text-white mb-5">Interested in a quote? Fill out the Form Below</h2>
+             <form class="form" name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSemZB9PsiSuclUHKOWaREWrINn7aMlzyqGN8ODyXsTQpnDJ3A/formResponse?" target="hidden_iframe" onsubmit="submitted=true; test();">
+              <div class="form-group">
+                <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="entry.817010682" name="entry.817010682" placeholder="Enter your name...">
+              </div>
+               <div class="form-group">
+                <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="entry.253630795" name="entry.253630795" placeholder="Enter email address...">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="TEST" name="entry.1781703736" placeholder="Enter your wedding date...">
+              </div>
+              <input type="submit" value="Submit"class="btn btn-primary mx-auto"></input>
             </form>
-
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
           </div>
         </div>
       </div>
@@ -152,54 +187,9 @@
     <!-- Contact Section -->
     <section class="contact-section bg-black">
       <div class="container">
-
-        <div class="row">
-
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Address</h4>
-                <hr class="my-4">
-                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-envelope text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Email</h4>
-                <hr class="my-4">
-                <div class="small text-black-50">
-                  <a href="#">hello@yourdomain.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Phone</h4>
-                <hr class="my-4">
-                <div class="small text-black-50">+1 (555) 902-8832</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="social d-flex justify-content-center">
-          <a href="#" class="mx-2">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="mx-2">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="mx-2">
-            <i class="fab fa-github"></i>
+          <a href="https://vimeo.com/amandamaiorino" class="mx-2">
+            <i class="fab fa-vimeo"></i>
           </a>
         </div>
 
@@ -209,12 +199,11 @@
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container">
-        Copyright &copy; Your Website 2018
+        Copyright &copy; Nova Film 2018
       </div>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
@@ -222,6 +211,22 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+          $(".js-modal-btn").each(function(indx, item){
+            var vimeoVideoID = $(item).data("video-id");
+                $.getJSON('http://www.vimeo.com/api/v2/video/' + vimeoVideoID + '.json?callback=?', { format: "json" }, function (data) {
+                    featuredImg = data[0].thumbnail_large;
+                    $(item).attr("src", featuredImg);
+                });
+          });
+        });
+    </script>
+
+    <script>
+      $(".js-modal-btn").modalVideo({channel:'vimeo'});
+    </script>
 
   </body>
 
