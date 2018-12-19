@@ -100,6 +100,11 @@
   background-size: cover;
 }
 
+.masthead-sub {
+  min-height: 16rem;
+  padding: 8rem 0 0 0;
+}
+
 .masthead h1 {
   font-family: 'Varela Round';
   font-size: 2.5rem;
@@ -120,6 +125,7 @@
     font-size: 4rem;
     line-height: 4rem;
   }
+  
 }
 
 @media (min-width: 992px) {
@@ -127,6 +133,10 @@
     height: 100vh;
     padding: 0;
   }
+  .masthead-sub {
+    height: 50vh;
+  }
+
   .masthead h1 {
     font-size: 6.5rem;
     line-height: 6.5rem;
@@ -324,3 +334,33 @@ footer {
   .video-thumbnail:hover:before {
     color: #64a19d;
   }
+
+  .portfolio-item {
+    margin-bottom: 30px;
+  }
+  
+  .pagination {
+    margin-bottom: 30px;
+  }
+
+  .video-thumbnail-sm {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .video-thumbnail-sm:before {
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      content: "\f04b";
+      font-family: 'Font Awesome 5 Free';
+      font-size: 66px;
+      color: #fff;
+      opacity: .8;
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    }
+    .video-thumbnail-sm:hover:before {
+      color: #64a19d;
+    }
