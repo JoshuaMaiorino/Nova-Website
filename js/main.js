@@ -3,9 +3,11 @@
 
 	///////////////////////////
 	// Preloader
+	/*
 	$(window).on('load', function() {
 		$("#preloader").delay(600).fadeOut();
 	});
+	*/
 
 	///////////////////////////
 	// Scrollspy
@@ -91,3 +93,29 @@
 	});
 
 })(jQuery);
+
+$(document).ready(function () {
+	
+	//Add Vimeo Thumbnails to all Video Cards
+	$(".js-vimeo-card").each(function(indx, item){
+	  var vimeoVideoID = $(item).find("a").data("video-id");
+		  $.getJSON('https://www.vimeo.com/api/v2/video/' + vimeoVideoID + '.json?callback=?', { format: "json" }, function (data) {
+			  featuredImg = data[0].thumbnail_large;
+			  $(item).find("img").attr("src", featuredImg);
+		  });
+	});
+
+	//Add Vimeo Thumbnails and Modals for Image Sliders
+	$(".js-vimeo-slider img").each(function(indx, item){
+		var vimeoVideoID = $(item).data("video-id");
+			$.getJSON('https://www.vimeo.com/api/v2/video/' + vimeoVideoID + '.json?callback=?', { format: "json" }, function (data) {
+				featuredImg = data[0].thumbnail_large;
+				$(item).attr("src", featuredImg);
+				$(item).modalVideo({channel:'vimeo'});
+			});
+	  });
+
+	//Add Modal Video Popups for Each Vimeo Video
+	$(".js-vimeo-card").find("a").modalVideo({channel:'vimeo'});
+  });
+
